@@ -12,11 +12,11 @@ Integration Services must authenticate with the OmniLink backend using a pre-sha
 
 ## Methods
 
-All methods names are prefixed with a module namespace in the format of `namespace:module` where `namespace` is the name of a service container and `module` is the name of a module within that service container.
+All methods names are prefixed with an object namespace, which uses the format `module:object`, where `module` is the name of the module, and `object` is the name of the object. The object namespace is followed by a method name.
 
 ### Profiles
 
-Module namespace: `omnilink:profiles`
+Object Namespace: `omnilink:profiles`
 
 | Path | Description | Parameters | Returns |
 |------|-------------|------------|---------|
@@ -27,7 +27,7 @@ Module namespace: `omnilink:profiles`
 
 ### Accounts
 
-Module namespace: `omnilink:accounts`
+Object Namespace: `omnilink:accounts`
 
 Rules:
 1. Accounts are not created directly, they are created automatically when a profile is linked to a platform.
@@ -41,7 +41,7 @@ Rules:
 
 ### Tokens
 
-Module namespace: `omnilink:tokens`
+Object Namespace: `omnilink:tokens`
 
 | Path | Description | Parameters | Returns |
 |------|-------------|------------|---------|
@@ -54,7 +54,7 @@ Module namespace: `omnilink:tokens`
 
 ### Profiles
 
-Module namespace: `omnilink:notifications/profiles`
+Object Namespace: `omnilink:notifications/profiles`
 
 | Path | Description | Parameters |
 |------|-------------|------------|
@@ -62,7 +62,7 @@ Module namespace: `omnilink:notifications/profiles`
 
 ### Accounts
 
-Module namespace: `omnilink:notifications/accounts`
+Object Namespace: `omnilink:notifications/accounts`
 
 | Path | Description | Parameters |
 |------|-------------|------------|
@@ -70,7 +70,7 @@ Module namespace: `omnilink:notifications/accounts`
 
 ### Tokens
 
-Module namespace: `omnilink:notifications/tokens`
+Object Namespace: `omnilink:notifications/tokens`
 
 | Path | Description | Parameters |
 |------|-------------|------------|
