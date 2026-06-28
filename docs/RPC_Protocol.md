@@ -2,17 +2,21 @@
 
 The OmniLink RPC protocol is a simple JSON-RPC 2.0 protocol over WebSockets, designed to allow integration services to communicate with the OmniLink backend.
 
+Current Protocol Identifier: `ominilink-v1`
+
 ## Access
 
 Integration Services must authenticate with the OmniLink backend using a pre-shared secret, which is provided in one of two ways:
 - in the `Authorization` header of the WebSocket handshake request, as a Bearer token `Authorization: Bearer <secret>`
-- in the `Sec-WebSocket-Protocol` header of the WebSocket handshake request, after the `ominilink-v1` protocol identifier, as a secret token `Sec-WebSocket-Protocol: ominilink-v1,<secret>`
+- in the `Sec-WebSocket-Protocol` header of the WebSocket handshake request, after the protocol identifier, as a secret token `Sec-WebSocket-Protocol: ominilink-v1,<secret>`
 
 ## Methods
 
+All methods names are prefixed with a module namespace in the format of `namespace:module` where `namespace` is the name of a service container and `module` is the name of a module within that service container.
+
 ### Profiles
 
-Method base path: `omnilink:profiles`
+Module namespace: `omnilink:profiles`
 
 | Path | Description | Parameters | Returns |
 |------|-------------|------------|---------|
@@ -23,7 +27,7 @@ Method base path: `omnilink:profiles`
 
 ### Accounts
 
-Method base path: `omnilink:accounts`
+Module namespace: `omnilink:accounts`
 
 Rules:
 1. Accounts are not created directly, they are created automatically when a profile is linked to a platform.
@@ -37,7 +41,7 @@ Rules:
 
 ### Tokens
 
-Method base path: `omnilink:tokens`
+Module namespace: `omnilink:tokens`
 
 | Path | Description | Parameters | Returns |
 |------|-------------|------------|---------|
