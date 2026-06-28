@@ -18,8 +18,8 @@ flowchart BT
         C[Minecraft Server Plugin]
         D[Discord Bot]
 
-        C ---|REST API| A
-        D ---|REST API| A
+        C ---|RPC API| A
+        D ---|RPC API| A
     end
 ```
 
