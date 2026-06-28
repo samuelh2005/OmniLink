@@ -48,7 +48,34 @@ Module namespace: `omnilink:tokens`
 | `/get` | Get a token by token string | `token` (string) | Token |
 | `/get` | Get all tokens for a profile | `profile_id` (uuid) | Array<Token> |
 | `/new` | Create a new verification token | `profile_id` (uuid), `target_platform` (string), `target_platform_id` (optional string) | Token |
-| `/update` | Update a token's status | `token` (string), `target_platform` (string) , `target_platform_id` (required string) | Token |
+| `/update` | Complete account linking | `token` (string), `target_platform` (string) , `target_platform_id` (required string) | Token |
+
+## Notifications
+
+### Profiles
+
+Module namespace: `omnilink:notifications/profiles`
+
+| Path | Description | Parameters |
+|------|-------------|------------|
+| `/new` | Notify that a new profile has been created | `profile` (Profile) |
+
+### Accounts
+
+Module namespace: `omnilink:notifications/accounts`
+
+| Path | Description | Parameters |
+|------|-------------|------------|
+| `/new` | Notify that a new account has been created | `account` (Account), `profile` (Profile) |
+
+### Tokens
+
+Module namespace: `omnilink:notifications/tokens`
+
+| Path | Description | Parameters |
+|------|-------------|------------|
+| `/new` | Notify that a new token has been created | `token` (Token), `profile` (Profile) |
+| `/update` | Notify that a token has linked to an account | `token` (Token), `profile` (Profile), `account` (Account) |
 
 ## Schemas
 
