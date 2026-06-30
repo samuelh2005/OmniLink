@@ -1,4 +1,4 @@
-# OmniLink RPC Protocol
+# OmniLink RPC Protocol (Deprecated)
 
 The OmniLink RPC protocol is a simple JSON-RPC 2.0 protocol over WebSockets, designed to allow integration services to communicate with the OmniLink backend.
 
