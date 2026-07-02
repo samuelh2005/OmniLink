@@ -1,18 +1,16 @@
 # OmniLink Architecture
 
-OmniLink follows the LuckPerms pattern of distributed systems. There is no single backend service. Instead each interface share a DB and message bus so that they can communicate with each other. The DB is the source of truth for all account relationships, and the message bus is used to notify other services of changes to the DB.
+OmniLink follows the principles of a microservices architecture, where each platform integration is implemented as a separate service. The OmniLink backend serves as the central hub for account linking and management, while the web frontend provides a user-friendly interface for users to link and manage their accounts.
 
 ```mermaid
 flowchart LR
     A[Backend]
 
-    B[Minecraft Server Plugin]
-    C[Discord Bot]
-    D[Web Frontend]
+    B[Social Providers]
+    C[Web Frontend]
 
     B ---|API| A
     C ---|API| A
-    D ---|API| A
 ```
 
 ## Rules
