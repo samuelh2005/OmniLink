@@ -1,6 +1,6 @@
-# OAuth Provider
+# OAuth Consumption
 
-The OAuth Provider implements the OAuth 2.0 protocol to allow users to link their accounts on other platforms with OmniLink.
+OmniLink supports OAuth 2.0 for account linking with third-party services. This document outlines the steps involved in the OAuth flow for consuming OAuth tokens and linking user accounts.
 
 ## OAuth flow
 
@@ -11,8 +11,3 @@ The OAuth Provider implements the OAuth 2.0 protocol to allow users to link thei
 5. The Web Interface exchanges the authorization code for an access token by making a request to the OAuth Provider's token endpoint.
 6. The Web Interface uses the access token to retrieve the user's account information from the OAuth Provider's API.
 7. The Web Interface sends the user's account information to the OmniLink backend, which updates the user's profile and links the account to their OmniLink profile.
-
-## Supported platforms
-
-- Discord
-- GitHub
