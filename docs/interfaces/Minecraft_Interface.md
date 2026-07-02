@@ -1,8 +1,8 @@
-# Minecraft Integration
+# Minecraft Interface
 
-The Minecraft integration is designed to be the primary initiating platform for account linking. It is responsible for generating verification tokens.
+The Minecraft interface is designed to be the primary initiating platform for account linking. It is responsible for generating verification tokens.
 
-This integration is implemented as a Minecraft server plugin using the shared Java library, which allows it to communicate with the DB and message bus.
+This interface is implemented as a Minecraft server plugin using the shared Java library, which allows it to communicate with the OmniLink backend via the REST API.
 
 ## Commands
 

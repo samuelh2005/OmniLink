@@ -4,20 +4,15 @@ OmniLink follows the LuckPerms pattern of distributed systems. There is no singl
 
 ```mermaid
 flowchart LR
-    subgraph Backend
-        B((Database))
-        A[Message Bus]
-    end
+    A[Backend]
 
-    subgraph Interfaces
-        C[Minecraft Server Plugin]
-        D[Discord Bot]
+    B[Minecraft Server Plugin]
+    C[Discord Bot]
+    D[Web Frontend]
 
-        C ---|SQL| B
-        C ---|Message Bus| A
-        D ---|SQL| B
-        D ---|Message Bus| A
-    end
+    B ---|API| A
+    C ---|API| A
+    D ---|API| A
 ```
 
 ## Rules
